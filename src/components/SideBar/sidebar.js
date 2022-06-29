@@ -8,17 +8,17 @@ import axios from 'axios';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 function SideBar() {
-    const [userdata,setuserdata]=useState([]);
+    
 
-
+    const [ userdata,setuserdata]=useState([]);
     useEffect(() => {
-        const getUsers = async () => {
-          const users = await axios.get("https://stacklinebackend.herokuapp.com/data");
-          setuserdata(users.data);
-        };
-        getUsers();
-      }, []);
-
+        axios.get('https://stacklinebackend.herokuapp.com/data', {
+          })
+          .then(function (response) {
+            console.log("response", response.data);
+            setuserdata(response.data.data)
+          })
+        }, [])
   return (
     <Container
         className="side"

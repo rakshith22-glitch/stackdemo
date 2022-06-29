@@ -17,7 +17,7 @@ function TableData() {
           })
           .then(function (response) {
             console.log(response);
-            setuserdata(response.data[0].sales)
+            setuserdata(response.data.data[0].sales)
           })
         }, [])
 

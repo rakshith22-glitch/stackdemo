@@ -13,8 +13,7 @@ function Graph() {
           })
           .then(function (response) {
             console.log(response);
-            setuserdata(response.data)
-           
+            setuserdata(response.data.data)
           })
 
         }, [])
