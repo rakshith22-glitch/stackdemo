@@ -1,6 +1,7 @@
 const path = require("path");
 const express = require("express");
 const app = express();
+const fs = require('fs');
 
 const port = process.env.PORT || 3000;
 const publicPath = path.join(__dirname, "../stackdemo/public");
@@ -21,3 +22,12 @@ app.listen(port, (err) => {
   if (err) return console.log(err);
   console.log("Server is up!", port);
 });
+
+
+app.get("/data", (req,res) =>{
+    fs.readFile('data.json', (err, data1) => {
+        if (err) throw err;
+        let data2 = JSON.parse(data1);
+        res.send(data2);
+    });
+})
