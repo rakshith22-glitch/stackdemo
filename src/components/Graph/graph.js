@@ -9,7 +9,7 @@ function Graph() {
 
     const [ userdata,setuserdata]=useState([]);
     useEffect(() => {
-        axios.get('http://localhost:8000/data', {
+        axios.get('https://stacklinedemo.herokuapp.com/data', {
           })
           .then(function (response) {
             console.log(response);
