@@ -13,7 +13,7 @@ function SideBar() {
 
     useEffect(() => {
         const getUsers = async () => {
-          const users = await axios.get("https://stacklinedemo.herokuapp.com/data");
+          const users = await axios.get("https://stacklinebackend.herokuapp.com/data");
           setuserdata(users.data);
         };
         getUsers();
