@@ -23,3 +23,4 @@ BACKEND -> https://stacklinebackend.herokuapp.com/
 the process to do that would be : 
 new Date('2020-12-28').toLocaleString('en-us',{month:'short'}) 
 
+8) The website isnt MOBILE ready yet, shall make necessary adjustments
