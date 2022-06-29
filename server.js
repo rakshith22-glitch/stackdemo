@@ -3,6 +3,8 @@ const express = require("express");
 const app = express();
 const fs = require('fs');
 const cors = require("cors");
+
+
 const port = process.env.PORT || 5000;
 const publicPath = path.join(__dirname, "../stackdemo/public");
 app.use(express.static(publicPath));
@@ -12,7 +14,7 @@ app.use(express.static(publicPath));
 const whitelist = [
   "http://localhost:3000",
   "http://localhost:3001",
-  "https://stacklinebackend.herokuapp.com",
+  "https://stacklinebackend.herokuapp.com/data",
 ];
 const corsOptions = {
   origin: function (origin, callback) {
