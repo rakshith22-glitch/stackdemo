@@ -1,0 +1,21 @@
+.side {
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+    width: calc(100% );
+    height: calc(100% );
+    box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+    
+  }
+
+  .box {
+    display: flex;
+    width: 100% ;
+  
+    padding: 10px;
+    text-align: center;
+  }
+
+  .child {
+    flex: 1 1 auto;
+  }
